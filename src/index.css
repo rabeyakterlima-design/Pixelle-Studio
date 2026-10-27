@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-light text-brand-text font-sans antialiased min-h-screen selection:bg-cobalt selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-navy tracking-tight;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F6FB;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCE3EF;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B0BED4;
+}
+
+/* Glassmorphism and badges */
+.badge-sale {
+  @apply bg-rose-500 text-white text-[11px] font-bold px-2 py-0.5 rounded uppercase tracking-wider shadow-sm;
+}
+.badge-new {
+  @apply bg-cobalt text-white text-[11px] font-bold px-2 py-0.5 rounded uppercase tracking-wider shadow-sm;
+}
+.badge-category {
+  @apply bg-blue-50 text-cobalt text-xs font-medium px-2.5 py-1 rounded-full border border-blue-100;
+}
